@@ -19,7 +19,7 @@ public class Markov01_lib {
 	}
 	
 	//p = 1/2 => Reccurent, p =! 1/2 => Transient
-	public double[] getSimulation() {
+	public double getSimulation() {
 		double prob[] = new double[t];
 		int position = 0; 
 		double random_val = 0.0;
@@ -49,9 +49,9 @@ public class Markov01_lib {
 			if(prob[i] == 1)repro++;
 		}
 		repro /= t;
-		System.out.println("再帰確率" + repro);
+		//System.out.println("再帰確率" + repro);
 		
-		return prob;
+		return repro;
 	}
 	
 
